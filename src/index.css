@@ -1,0 +1,52 @@
+
+
+@import "tailwindcss";
+
+
+
+/* Retro serif fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Serif+Display&display=swap");
+
+:root {
+  --font-body: "Cormorant Garamond", "Times New Roman", serif;
+  --font-display: "DM Serif Display", "Times New Roman", serif;
+  --paper-bg: #f5f0e6; /* light newspaper cream */
+}
+
+
+
+@layer base {
+  html {
+    font-family: var(--font-body);
+    background-color: var(--paper-bg);
+  }
+
+  body {
+    @apply text-slate-900;
+    background-color: var(--paper-bg);
+    margin: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+  }
+}
+
+/* Utility for the central brand title */
+.brand-title {
+  font-family: var(--font-display);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+@keyframes action-marquee {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(-75%);
+  }
+}
